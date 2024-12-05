@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bet Well System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Bet Well System</h1>
+        <p>Reducing gambling harm through insights and tools.</p>
+    </header>
+
+    <main class="container">
+        <section id="visualization">
+            <h2>Spend & Activity Visualization</h2>
+            <div class="chart-container">
+                <canvas id="spendChart"></canvas>
+            </div>
+        </section>
+
+        <section id="leim">
+            <h2>LEIM Risk Ratings</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Week</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody id="leimTable">
+                </tbody>
+            </table>
+        </section>
+
+        <section id="spend-limits">
+            <h2>Spend Limits</h2>
+            <div class="spend-limits">
+                <p><strong>Daily Limit:</strong> <span id="dailyLimit"></span></p>
+                <p><strong>Weekly Limit:</strong> <span id="weeklyLimit"></span></p>
+                <p><strong>Monthly Limit:</strong> <span id="monthlyLimit"></span></p>
+            </div>
+        </section>
+
+        <section id="resources">
+            <h2>Responsible Gambling Tools</h2>
+            <ul>
+                <li><a href="#">Learn More About Responsible Gambling</a></li>
+                <li><a href="#">Set Up Spend Limits</a></li>
+                <li><a href="#">Access Support Resources</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Bet Well System | Promoting Responsible Gambling</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

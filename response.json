@@ -1,0 +1,61 @@
+{
+    "user": {
+        "id": "12345",
+        "name": "John Doe",
+        "spendLimits": {
+            "daily": 100,
+            "weekly": 500,
+            "monthly": 2000
+        },
+        "leimRatings": [
+            {
+                "week": "Week 1",
+                "rating": "Low"
+            },
+            {
+                "week": "Week 2",
+                "rating": "Medium"
+            },
+            {
+                "week": "Week 3",
+                "rating": "High"
+            },
+            {
+                "week": "Week 4",
+                "rating": "Medium"
+            }
+        ],
+        "trendingSpend": [
+            {
+                "week": "Week 1",
+                "amount": 200
+            },
+            {
+                "week": "Week 2",
+                "amount": 300
+            },
+            {
+                "week": "Week 3",
+                "amount": 250
+            },
+            {
+                "week": "Week 4",
+                "amount": 400
+            }
+        ],
+        "responsibleGamblingLinks": [
+            {
+                "title": "Learn More About Responsible Gambling",
+                "url": "https://example.com/responsible-gambling"
+            },
+            {
+                "title": "Set Up Spend Limits",
+                "url": "https://example.com/spend-limits"
+            },
+            {
+                "title": "Access Support Resources",
+                "url": "https://example.com/support-resources"
+            }
+        ]
+    }
+}
