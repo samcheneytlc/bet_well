@@ -12,10 +12,10 @@
 <body>
     <header>
         <div class="header-content">
-            <img src="image.png" alt="Bet Well System Logo" class="header-logo">
+            <img src="Brand-Logos_THE-LOTT[1].png" alt="Bet Well System Logo" class="header-logo">
             <div class="header-text">
-                <h1>Bet Well TLC</h1>
-                <p>Reducing gambling harm by transparency.</p>
+                <h1>Bet Well System</h1>
+                <p>Reducing gambling harm through insights</p>
             </div>
         </div>
     </header>
@@ -28,45 +28,45 @@
                 <option value="user1">Alice (Low Risk)</option>
                 <option value="user2">Bob (Medium Risk)</option>
                 <option value="user3">Charlie (High Risk)</option>
+                <option value="user4">Dave (Very High Risk)</option>
             </select>
         </section>
 
+        <!-- Profile Card Section -->
         <section id="user-profile-card">
-            <div class="profile-card">
+            <div class="profile-card green">
                 <h2 id="greeting">Hello, Alice!</h2>
-                <p><strong>YourWeekly Limit:</strong> <span id="weeklyLimit">$250</span></p>
+                <p><strong>LEIM Risk Rating:</strong> <span id="leimRating">Green</span></p>
+                <p><strong>Weekly Limit:</strong> <span id="weeklyLimit">$250</span></p>
             </div>
         </section>
 
-        <section id="user-message">
-            <p id="message-text"></p>
+        <!-- User Message Section -->
+        <section id="user-message" style="justify-content: center;">
+            <p id="message-text">You're doing great! Keep up your responsible gambling habits.</p>
         </section>
 
+        <!-- Statistics Section -->
         <section id="statistics">
-            <h2>Last Year's Winners</h2>
             <div class="stats-container">
-                <div class="stat-item" id="total-prizes">
-                    <img src="dollar_icon.png" alt="Dollar Icon">
-                    <p class="stat-value">Over $3.7B</p>
-                    <p class="stat-label">Total prizes won*</p>
+                <div class="stat-item">
+                    <h3>Total Number of Winners</h3>
+                    <p id="totalWinners">$0</p>
                 </div>
-                <div class="stat-item" id="winning-entries">
-                    <img src="celebration_icon.png" alt="Celebration Icon">
-                    <p class="stat-value">Over 122.7M</p>
-                    <p class="stat-label">Winning entries*</p>
+                <div class="stat-item">
+                    <h3>Money Donated to Charity</h3>
+                    <p id="moneyDonated">$0</p>
                 </div>
-                <div class="stat-item" id="wins-per-minute">
-                    <img src="clock_icon.png" alt="Clock Icon">
-                    <p class="stat-value">233</p>
-                    <p class="stat-label">Wins every minute</p>
+                <div class="stat-item">
+                    <h3>Retailer Rewards</h3>
+                    <p id="moneyDonated">$725m</p>
                 </div>
             </div>
         </section>
-
 
         <!-- Combined Visualization and Game Breakdown Section -->
         <section id="visualization">
-            <h2>Total Weekly Spend Visualization & Game Breakdown</h2>
+            <h2>Your Weekly Spend Visualization & Game Breakdown</h2>
             <div class="chart-table-card">
                 <div class="chart-container">
                     <canvas id="spendChart"></canvas>
@@ -82,91 +82,153 @@
                                 <th>Week 4</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td><img src="saturday_gold_lotto.png" alt="Game 1" class="game-label"></td>
-                                <td>10</td>
-                                <td>15</td>
-                                <td>20</td>
-                                <td>25</td>
-                            </tr>
-                            <tr>
-                                <td><img src="ALL_WW-Game-Round_192x192.png" alt="Game 2" class="game-label"></td>
-                                <td>5</td>
-                                <td>10</td>
-                                <td>15</td>
-                                <td>20</td>
-                            </tr>
-                            <tr>
-                                <td><img src="ALL_PB-Game-Round_192x192.png" alt="Game 3" class="game-label"></td>
-                                <td>0</td>
-                                <td>5</td>
-                                <td>10</td>
-                                <td>15</td>
-                            </tr>
-                            <tr>
-                                <td><img src="NSWL_Sat-Game-Round_192x192.png" alt="Game 4" class="game-label"></td>
-                                <td>10</td>
-                                <td>20</td>
-                                <td>30</td>
-                                <td>40</td>
-                            </tr>
-                            <tr>
-                                <td><img src="ALL_LLS-Game-Round-Breakout_192x192.png" alt="Game 5" class="game-label">
-                                </td>
-                                <td>25</td>
-                                <td>30</td>
-                                <td>35</td>
-                                <td>40</td>
-                            </tr>
-                            <tr>
-                                <td><img src="ALL_LLM-Game-Round-Breakout_192x192.png" alt="Game 6" class="game-label">
-                                </td>
-                                <td>10</td>
-                                <td>15</td>
-                                <td>20</td>
-                                <td>25</td>
-                            </tr>
+                        <tbody id="gameBreakdownTable">
+                            <!-- Dynamically populated rows -->
                         </tbody>
                     </table>
                 </div>
-
             </div>
         </section>
-
 
         <!-- Responsible Gambling Resources Section -->
         <section id="resources">
-            <h2>Responsible Gambling Tools</h2>
+            <h2>Learn More</h2>
             <div id="resourceCards">
-                <a href="#" class="resource-card">
-                    <h3>Learn More About Responsible Gambling</h3>
+                <a target="_blank" href="https://www.thelott.com/about/responsible-play" class="resource-card">
+                    <img src="Responsible Play icons.png" />
+                    <h3>Responsible Gambling Resources</h3>
                 </a>
-                <a href="#" class="resource-card">
+                <a target="_blank" href="https://www.thelott.com/account/settings" class="resource-card">
+                    <img src="spend limit icon.png" />
                     <h3>Set Up Spend Limits</h3>
-                </a>
-                <a href="#" class="resource-card">
-                    <h3>Access Support Resources</h3>
                 </a>
             </div>
         </section>
-    </main>
 
-    <footer>
-        <p>© 2024 Bet Well System | Promoting Responsible Gambling</p>
-    </footer>
+        <img src="Have fun and play responsibly.png" />
 
-    <!-- Popup for High-Risk Users -->
-    <div id="popup" class="popup hidden">
-        <div class="popup-content">
-            <p><strong>Warning:</strong> You are identified as a high-risk user. Please contact the gambling hotline for
-                immediate support.</p>
-            <a href="tel:1-800-522-4700" class="hotline-link">Call Gambling Hotline: 1-800-522-4700</a>
-            <button id="closePopup">Close</button>
-        </div>
-    </div>
+        <footer>
+            <p>© 2024 Bet Well System | Promoting Responsible Gambling</p>
+        </footer>
 
-    <script src="script.js"></script>
+        <script>
+            // Simulated user profiles with explicit spend limits and per-game weekly spend
+            const userProfiles = {
+                user1: { name: "Alice", leimRating: "green", weeklyLimit: 250, weeklyGameSpend: [[10, 15, 5, 20, 0, 0, 0, 0, 0], [10, 20, 10, 15, 5, 0, 0, 0, 0], [5, 10, 5, 10, 10, 0, 0, 0, 0], [10, 15, 20, 25, 0, 0, 0, 0, 0]] },
+                user2: { name: "Bob", leimRating: "amber", weeklyLimit: 500, weeklyGameSpend: [[20, 30, 40, 50, 10, 0, 0, 0, 0], [30, 40, 50, 60, 20, 0, 0, 0, 0], [40, 50, 60, 30, 0, 0, 0, 0], [50, 60, 70, 40, 0, 0, 0, 0]] },
+                user3: { name: "Charlie", leimRating: "red", weeklyLimit: 1000, weeklyGameSpend: [[50, 60, 70, 80, 90, 0, 0, 0, 0], [60, 70, 80, 90, 100, 0, 0, 0, 0], [70, 80, 90, 100, 110, 0, 0, 0, 0], [80, 90, 100, 110, 120, 0, 0, 0, 0]] },
+                user4: { name: "Dave", leimRating: "black", weeklyLimit: 2000, weeklyGameSpend: [[100, 120, 150, 200, 0, 0, 0, 0, 0], [110, 130, 160, 210, 0, 0, 0, 0, 0], [120, 140, 170, 220, 0, 0, 0, 0, 0], [130, 150, 180, 230, 0, 0, 0, 0, 0]] }
+            };
+
+            let currentUser = userProfiles.user1;
+            let spendChart = null;
+
+            function generateChartConfig() {
+                const totalWeeklySpend = currentUser.weeklyGameSpend.map(weekSpend =>
+                    weekSpend.reduce((a, b) => a + b, 0)
+                );
+
+                return {
+                    type: "bar",
+                    data: {
+                        labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
+                        datasets: [{
+                            data: totalWeeklySpend,
+                            backgroundColor: "rgba(0, 123, 255, 0.6)",
+                            borderColor: "rgba(0, 123, 255, 1)",
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false },
+                            title: { display: false },
+                            tooltip: { enabled: true },
+                        },
+                        scales: {
+                            x: {
+                                grid: { display: false }
+                            },
+                            y: {
+                                grid: { display: false },
+                                beginAtZero: true
+                            }
+                        },
+                    },
+                    plugins: [{
+                        id: "weeklySpendLabel",
+                        afterDatasetsDraw: chart => {
+                            const { ctx } = chart;
+                            ctx.save();
+                            const meta = chart.getDatasetMeta(0);
+
+                            meta.data.forEach((bar, index) => {
+                                const value = chart.data.datasets[0].data[index];
+                                ctx.font = "bold 14px Arial";
+                                ctx.fillStyle = "#000";
+                                ctx.textAlign = "center";
+                                ctx.fillText(`$${value}`, bar.x, bar.y - 10);
+                            });
+                            ctx.restore();
+                        }
+                    }]
+                };
+            }
+
+
+            function updateProfileCard() {
+                document.getElementById("greeting").textContent = `Hello, ${currentUser.name}!`;
+                document.getElementById("leimRating").textContent = currentUser.leimRating.charAt(0).toUpperCase() + currentUser.leimRating.slice(1);
+                document.getElementById("weeklyLimit").textContent = `$${currentUser.weeklyLimit}`;
+                document.querySelector(".profile-card").className = `profile-card ${currentUser.leimRating}`;
+            }
+
+            function updateUserMessage() {
+                const messages = {
+                    green: "You're doing great! Keep up your responsible gambling habits.",
+                    amber: "Consider setting limits to stay on track and maintain healthy habits.",
+                    red: "You're at high risk. Please consider setting stricter limits.",
+                    black: "Very high risk. Please seek immediate support."
+                };
+                document.getElementById("message-text").textContent = messages[currentUser.leimRating];
+            }
+
+            function populateGameBreakdownTable() {
+                const tableBody = document.getElementById("gameBreakdownTable");
+                tableBody.innerHTML = "";
+
+                currentUser.weeklyGameSpend[0].forEach((_, gameIndex) => {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `<td>Game ${gameIndex + 1}</td>` + currentUser.weeklyGameSpend.map(weekSpend => `<td>${weekSpend[gameIndex] || 0}</td>`).join("");
+                    tableBody.appendChild(row);
+                });
+            }
+
+            function updateChart() {
+                const totalWeeklySpend = currentUser.weeklyGameSpend.map(weekSpend => weekSpend.reduce((a, b) => a + b, 0));
+                spendChart.data.datasets[0].data = totalWeeklySpend;
+                spendChart.update();
+            }
+
+            window.addEventListener("DOMContentLoaded", () => {
+                updateProfileCard();
+                updateUserMessage();
+                populateGameBreakdownTable();
+
+                const ctx = document.getElementById("spendChart").getContext("2d");
+                spendChart = new Chart(ctx, generateChartConfig());
+
+                document.getElementById("userSelector").addEventListener("change", event => {
+                    currentUser = userProfiles[event.target.value];
+                    updateProfileCard();
+                    updateUserMessage();
+                    populateGameBreakdownTable();
+                    updateChart();
+                });
+            });
+        </script>
 </body>
 
 </html>
