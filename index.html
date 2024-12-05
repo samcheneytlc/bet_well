@@ -28,38 +28,33 @@
                 <option value="user1">Alice (Low Risk)</option>
                 <option value="user2">Bob (Medium Risk)</option>
                 <option value="user3">Charlie (High Risk)</option>
-                <option value="user4">Dave (Very High Risk)</option>
             </select>
         </section>
 
         <!-- Profile Card Section -->
         <section id="user-profile-card">
             <div class="profile-card green">
-                <h2 id="greeting">Hello, Alice!</h2>
-                <p><strong>LEIM Risk Rating:</strong> <span id="leimRating">Green</span></p>
+                <h2 id="greeting" style="color: white">Hello, Alice!</h2>
                 <p><strong>Weekly Limit:</strong> <span id="weeklyLimit">$250</span></p>
+                <p id="message-text" style="text-align: center;">You're doing great! Keep up your responsible gambling
+                    habits.</p>
             </div>
-        </section>
-
-        <!-- User Message Section -->
-        <section id="user-message" style="justify-content: center;">
-            <p id="message-text">You're doing great! Keep up your responsible gambling habits.</p>
         </section>
 
         <!-- Statistics Section -->
         <section id="statistics">
             <div class="stats-container">
                 <div class="stat-item">
-                    <h3>Total Number of Winners</h3>
-                    <p id="totalWinners">$0</p>
+                    <h3>Millionaires made</h3>
+                    <p id="totalWinners" style="font-size: 50px;">320+</p>
                 </div>
                 <div class="stat-item">
-                    <h3>Money Donated to Charity</h3>
-                    <p id="moneyDonated">$0</p>
+                    <h3>Community Rewards</h3>
+                    <p id="moneyDonated" style="font-size: 50px;">$5m</p>
                 </div>
                 <div class="stat-item">
                     <h3>Retailer Rewards</h3>
-                    <p id="moneyDonated">$725m</p>
+                    <p id="moneyDonated" style="font-size: 50px;">$725m</p>
                 </div>
             </div>
         </section>
@@ -105,7 +100,9 @@
             </div>
         </section>
 
-        <img src="Have fun and play responsibly.png" />
+        <section>
+            <img src="Have fun and play responsibly.png" />
+        </section>
 
         <footer>
             <p>© 2024 Bet Well System | Promoting Responsible Gambling</p>
@@ -114,10 +111,52 @@
         <script>
             // Simulated user profiles with explicit spend limits and per-game weekly spend
             const userProfiles = {
-                user1: { name: "Alice", leimRating: "green", weeklyLimit: 250, weeklyGameSpend: [[10, 15, 5, 20, 0, 0, 0, 0, 0], [10, 20, 10, 15, 5, 0, 0, 0, 0], [5, 10, 5, 10, 10, 0, 0, 0, 0], [10, 15, 20, 25, 0, 0, 0, 0, 0]] },
-                user2: { name: "Bob", leimRating: "amber", weeklyLimit: 500, weeklyGameSpend: [[20, 30, 40, 50, 10, 0, 0, 0, 0], [30, 40, 50, 60, 20, 0, 0, 0, 0], [40, 50, 60, 30, 0, 0, 0, 0], [50, 60, 70, 40, 0, 0, 0, 0]] },
-                user3: { name: "Charlie", leimRating: "red", weeklyLimit: 1000, weeklyGameSpend: [[50, 60, 70, 80, 90, 0, 0, 0, 0], [60, 70, 80, 90, 100, 0, 0, 0, 0], [70, 80, 90, 100, 110, 0, 0, 0, 0], [80, 90, 100, 110, 120, 0, 0, 0, 0]] },
-                user4: { name: "Dave", leimRating: "black", weeklyLimit: 2000, weeklyGameSpend: [[100, 120, 150, 200, 0, 0, 0, 0, 0], [110, 130, 160, 210, 0, 0, 0, 0, 0], [120, 140, 170, 220, 0, 0, 0, 0, 0], [130, 150, 180, 230, 0, 0, 0, 0, 0]] }
+                user1: {
+                    name: "Alice",
+                    leimRating: "green",
+                    weeklyLimit: 250,
+                    weeklyGameSpend: [
+                        [10, 15, 5, 20],
+                        [10, 20, 10, 15],
+                        [5, 10, 5, 10],
+                        [10, 15, 20, 25]
+                    ]
+                },
+                user2: {
+                    name: "Bob",
+                    leimRating: "amber",
+                    weeklyLimit: 500,
+                    weeklyGameSpend: [
+                        [20, 30, 40, 50],
+                        [30, 40, 50, 60],
+                        [40, 50, 60, 70],
+                        [50, 60, 70, 80]
+                    ]
+                },
+                user3: {
+                    name: "Charlie",
+                    leimRating: "red",
+                    weeklyLimit: 1000,
+                    weeklyGameSpend: [
+                        [50, 60, 70, 80],
+                        [60, 70, 80, 90],
+                        [70, 80, 90, 100],
+                        [80, 90, 100, 110]
+                    ]
+                }
+            };
+
+            const gameImages = [
+                "ALL_LLM-Game-Round-Breakout_192x192.png",
+                "ALL_LLS-Game-Round-Breakout_192x192.png",
+                "ALL_PB-Game-Round_192x192.png",
+                "ALL_WW-Game-Round_192x192.png"
+            ];
+
+            const messages = {
+                green: "Take a moment to review your play with The Lott!",
+                amber: "You might want to explore setting some limits to help stay on track.",
+                red: "It's worth reflecting on your spending and considering tighter limits."
             };
 
             let currentUser = userProfiles.user1;
@@ -144,54 +183,23 @@
                         maintainAspectRatio: false,
                         plugins: {
                             legend: { display: false },
-                            title: { display: false },
-                            tooltip: { enabled: true },
+                            tooltip: { enabled: true }
                         },
                         scales: {
-                            x: {
-                                grid: { display: false }
-                            },
-                            y: {
-                                grid: { display: false },
-                                beginAtZero: true
-                            }
-                        },
-                    },
-                    plugins: [{
-                        id: "weeklySpendLabel",
-                        afterDatasetsDraw: chart => {
-                            const { ctx } = chart;
-                            ctx.save();
-                            const meta = chart.getDatasetMeta(0);
-
-                            meta.data.forEach((bar, index) => {
-                                const value = chart.data.datasets[0].data[index];
-                                ctx.font = "bold 14px Arial";
-                                ctx.fillStyle = "#000";
-                                ctx.textAlign = "center";
-                                ctx.fillText(`$${value}`, bar.x, bar.y - 10);
-                            });
-                            ctx.restore();
+                            x: { grid: { display: false } },
+                            y: { grid: { display: false }, beginAtZero: true }
                         }
-                    }]
+                    }
                 };
             }
 
-
             function updateProfileCard() {
                 document.getElementById("greeting").textContent = `Hello, ${currentUser.name}!`;
-                document.getElementById("leimRating").textContent = currentUser.leimRating.charAt(0).toUpperCase() + currentUser.leimRating.slice(1);
                 document.getElementById("weeklyLimit").textContent = `$${currentUser.weeklyLimit}`;
                 document.querySelector(".profile-card").className = `profile-card ${currentUser.leimRating}`;
             }
 
             function updateUserMessage() {
-                const messages = {
-                    green: "You're doing great! Keep up your responsible gambling habits.",
-                    amber: "Consider setting limits to stay on track and maintain healthy habits.",
-                    red: "You're at high risk. Please consider setting stricter limits.",
-                    black: "Very high risk. Please seek immediate support."
-                };
                 document.getElementById("message-text").textContent = messages[currentUser.leimRating];
             }
 
@@ -201,7 +209,21 @@
 
                 currentUser.weeklyGameSpend[0].forEach((_, gameIndex) => {
                     const row = document.createElement("tr");
-                    row.innerHTML = `<td>Game ${gameIndex + 1}</td>` + currentUser.weeklyGameSpend.map(weekSpend => `<td>${weekSpend[gameIndex] || 0}</td>`).join("");
+                    const gameCell = document.createElement("td");
+
+                    if (gameImages[gameIndex]) {
+                        gameCell.innerHTML = `<img src="${gameImages[gameIndex]}" alt="Game ${gameIndex + 1}" style="width:50px; height:50px; object-fit:contain;">`;
+                    } else {
+                        gameCell.textContent = `Game ${gameIndex + 1}`;
+                    }
+
+                    row.appendChild(gameCell);
+                    currentUser.weeklyGameSpend.forEach(weekSpend => {
+                        const spendCell = document.createElement("td");
+                        spendCell.textContent = weekSpend[gameIndex] || 0;
+                        row.appendChild(spendCell);
+                    });
+
                     tableBody.appendChild(row);
                 });
             }
@@ -229,6 +251,7 @@
                 });
             });
         </script>
+
 </body>
 
 </html>

@@ -5,6 +5,7 @@ body {
     padding: 0;
     background-color: #f5f5f5;
     color: #232323;
+    line-height: 1.6;
 }
 
 /* Header Styling */
@@ -25,7 +26,7 @@ header {
 }
 
 .header-logo {
-    height: 200px;
+    height: 150px;
     width: auto;
 }
 
@@ -68,8 +69,8 @@ section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
-    max-width: 400px;
-    margin: 0 auto 40px auto;
+    max-width: 600px;
+    margin: 0 auto 40px;
     color: white;
     transition: background-color 0.3s ease;
 }
@@ -86,14 +87,6 @@ section {
     background-color: #dc3545;
 }
 
-.profile-card.black {
-    background-color: #232323;
-}
-
-#leimRating {
-    text-transform: capitalize;
-}
-
 .profile-card h2 {
     margin-top: 0;
     font-size: 1.8rem;
@@ -105,8 +98,43 @@ section {
     color: #ffffff;
 }
 
-.profile-card strong {
+/* Statistics Section */
+#statistics {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.stat-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.stat-item p {
+    font-size: 1.5rem;
     font-weight: bold;
+    color: #583788;
 }
 
 /* Chart and Table Card Styling */
@@ -125,7 +153,6 @@ section {
     margin-bottom: 20px;
 }
 
-/* Table Container */
 .table-container {
     overflow-x: auto;
 }
@@ -187,7 +214,6 @@ tbody tr:nth-child(even) {
 .resource-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    background-color: #f5f5f5;
 }
 
 .resource-card h3 {
@@ -198,112 +224,12 @@ tbody tr:nth-child(even) {
 
 /* Footer Styling */
 footer {
-    text-align: center;
-    padding: 20px;
-    background: #583788;
-    color: white;
-    font-size: 0.9rem;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Popup Styling */
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.popup.hidden {
-    display: none;
-}
-
-.popup-content {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.popup-content p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-.hotline-link {
-    display: block;
-    margin-bottom: 10px;
-    color: #e80f17;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.hotline-link:hover {
-    text-decoration: underline;
-}
-
-#closePopup {
-    background: #583788;
+    background-color: #583788;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#closePopup:hover {
-    background: #3e2857;
-}
-
-/* Statistics Section */
-#statistics {
-    margin: 40px 0;
     text-align: center;
-}
-
-.stats-container {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.stat-item {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    max-width: 300px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.stat-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-.stat-item img {
-    height: 50px;
-    margin-bottom: 10px;
-}
-
-.stat-value {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-.stat-label {
-    font-size: 0.9rem;
-    color: #777;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive Design */
@@ -342,31 +268,15 @@ footer {
 
 .resource-card img {
     width: 50px;
-    /* Set a fixed width */
     height: 50px;
-    /* Set a fixed height */
     object-fit: contain;
-    /* Ensures the image scales correctly */
     margin-right: 10px;
-    /* Adds some spacing between the image and text */
-    display: inline-block;
-    /* Aligns the image and text properly */
-    vertical-align: middle;
-    /* Aligns the image vertically with the text */
 }
 
-.resource-card {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: left;
-    /* Ensures text aligns correctly */
-    padding: 10px 20px;
-    /* Adjust padding as needed */
-}
-
-.resource-card h3 {
-    margin: 0;
-    font-size: 1rem;
-    color: #583788;
+section img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    /* Ensures the image scales responsively */
+    height: auto;
 }
