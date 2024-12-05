@@ -11,54 +11,160 @@
 
 <body>
     <header>
-        <h1>Bet Well System</h1>
-        <p>Reducing gambling harm through insights and tools.</p>
+        <div class="header-content">
+            <img src="image.png" alt="Bet Well System Logo" class="header-logo">
+            <div class="header-text">
+                <h1>Bet Well TLC</h1>
+                <p>Reducing gambling harm by transparency.</p>
+            </div>
+        </div>
     </header>
 
     <main class="container">
+        <!-- User Selector Section -->
+        <section id="user-selector">
+            <label for="userSelector"><strong>Select User:</strong></label>
+            <select id="userSelector">
+                <option value="user1">Alice (Low Risk)</option>
+                <option value="user2">Bob (Medium Risk)</option>
+                <option value="user3">Charlie (High Risk)</option>
+            </select>
+        </section>
+
+        <section id="user-profile-card">
+            <div class="profile-card">
+                <h2 id="greeting">Hello, Alice!</h2>
+                <p><strong>YourWeekly Limit:</strong> <span id="weeklyLimit">$250</span></p>
+            </div>
+        </section>
+
+        <section id="user-message">
+            <p id="message-text"></p>
+        </section>
+
+        <section id="statistics">
+            <h2>Last Year's Winners</h2>
+            <div class="stats-container">
+                <div class="stat-item" id="total-prizes">
+                    <img src="dollar_icon.png" alt="Dollar Icon">
+                    <p class="stat-value">Over $3.7B</p>
+                    <p class="stat-label">Total prizes won*</p>
+                </div>
+                <div class="stat-item" id="winning-entries">
+                    <img src="celebration_icon.png" alt="Celebration Icon">
+                    <p class="stat-value">Over 122.7M</p>
+                    <p class="stat-label">Winning entries*</p>
+                </div>
+                <div class="stat-item" id="wins-per-minute">
+                    <img src="clock_icon.png" alt="Clock Icon">
+                    <p class="stat-value">233</p>
+                    <p class="stat-label">Wins every minute</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Combined Visualization and Game Breakdown Section -->
         <section id="visualization">
-            <h2>Spend & Activity Visualization</h2>
-            <div class="chart-container">
-                <canvas id="spendChart"></canvas>
+            <h2>Total Weekly Spend Visualization & Game Breakdown</h2>
+            <div class="chart-table-card">
+                <div class="chart-container">
+                    <canvas id="spendChart"></canvas>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Game</th>
+                                <th>Week 1</th>
+                                <th>Week 2</th>
+                                <th>Week 3</th>
+                                <th>Week 4</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="saturday_gold_lotto.png" alt="Game 1" class="game-label"></td>
+                                <td>10</td>
+                                <td>15</td>
+                                <td>20</td>
+                                <td>25</td>
+                            </tr>
+                            <tr>
+                                <td><img src="ALL_WW-Game-Round_192x192.png" alt="Game 2" class="game-label"></td>
+                                <td>5</td>
+                                <td>10</td>
+                                <td>15</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td><img src="ALL_PB-Game-Round_192x192.png" alt="Game 3" class="game-label"></td>
+                                <td>0</td>
+                                <td>5</td>
+                                <td>10</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td><img src="NSWL_Sat-Game-Round_192x192.png" alt="Game 4" class="game-label"></td>
+                                <td>10</td>
+                                <td>20</td>
+                                <td>30</td>
+                                <td>40</td>
+                            </tr>
+                            <tr>
+                                <td><img src="ALL_LLS-Game-Round-Breakout_192x192.png" alt="Game 5" class="game-label">
+                                </td>
+                                <td>25</td>
+                                <td>30</td>
+                                <td>35</td>
+                                <td>40</td>
+                            </tr>
+                            <tr>
+                                <td><img src="ALL_LLM-Game-Round-Breakout_192x192.png" alt="Game 6" class="game-label">
+                                </td>
+                                <td>10</td>
+                                <td>15</td>
+                                <td>20</td>
+                                <td>25</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
         </section>
 
-        <section id="leim">
-            <h2>LEIM Risk Ratings</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Week</th>
-                        <th>Rating</th>
-                    </tr>
-                </thead>
-                <tbody id="leimTable">
-                </tbody>
-            </table>
-        </section>
 
-        <section id="spend-limits">
-            <h2>Spend Limits</h2>
-            <div class="spend-limits">
-                <p><strong>Daily Limit:</strong> <span id="dailyLimit"></span></p>
-                <p><strong>Weekly Limit:</strong> <span id="weeklyLimit"></span></p>
-                <p><strong>Monthly Limit:</strong> <span id="monthlyLimit"></span></p>
-            </div>
-        </section>
-
+        <!-- Responsible Gambling Resources Section -->
         <section id="resources">
             <h2>Responsible Gambling Tools</h2>
-            <ul>
-                <li><a href="#">Learn More About Responsible Gambling</a></li>
-                <li><a href="#">Set Up Spend Limits</a></li>
-                <li><a href="#">Access Support Resources</a></li>
-            </ul>
+            <div id="resourceCards">
+                <a href="#" class="resource-card">
+                    <h3>Learn More About Responsible Gambling</h3>
+                </a>
+                <a href="#" class="resource-card">
+                    <h3>Set Up Spend Limits</h3>
+                </a>
+                <a href="#" class="resource-card">
+                    <h3>Access Support Resources</h3>
+                </a>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>© 2024 Bet Well System | Promoting Responsible Gambling</p>
     </footer>
+
+    <!-- Popup for High-Risk Users -->
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <p><strong>Warning:</strong> You are identified as a high-risk user. Please contact the gambling hotline for
+                immediate support.</p>
+            <a href="tel:1-800-522-4700" class="hotline-link">Call Gambling Hotline: 1-800-522-4700</a>
+            <button id="closePopup">Close</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
